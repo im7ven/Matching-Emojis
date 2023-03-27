@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Matching Cards!</title>
+  </head>
+  <body>
+    <div id="gameMenu">
+      <h1 class="game-title">?Matching Emojis?</h1>
+      <button class="btn" id="startBtn">start game</button>
+    </div>
+    <div id="timer" class="timer">
+      <h2>Time</h2>
+      <p>
+        <span id="mins">0</span>:<span id="tens">0</span
+        ><span id="secs">0</span>
+      </p>
+    </div>
+    <div id="container" class="container">
+      <div id="results" class="hide-results">
+        <img id="rewardImg" class="reward-img" src="" alt="trophy" />
+        <h2 class="result-msg">
+          <span id="performance"></span>job your time was
+          <span id="userTime"></span>you have earned the
+          <span id="rewardMsg"></span>
+        </h2>
+        <button class="btn" onclick="playAgain()" id="playAgain">
+          play again
+        </button>
+      </div>
+
+      <ul class="cards">
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-1.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-2.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-3.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-4.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-5.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-6.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-7.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-8.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-9.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-10.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-11.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-12.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-13.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-14.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-15.png" alt="icon" />
+          </div>
+        </li>
+
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-1.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-2.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-3.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-4.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-5.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-6.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-7.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-8.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-9.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-10.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-11.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-12.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-13.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-14.png" alt="icon" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="view card-front">
+            <img class="card-img" src="images/question.png" alt="icon" />
+          </div>
+          <div class="view card-back">
+            <img class="card-img" src="images/img-15.png" alt="icon" />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
